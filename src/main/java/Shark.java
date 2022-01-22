@@ -1,10 +1,10 @@
 import java.util.ArrayList;
 import javafx.scene.canvas.GraphicsContext;
-import java.util.concurrent.ThreadLocalRandom;
+import java.util.concurrent.ThreadLocalRandom;      //Import libraries
 
 class Shark implements GameObject {
     private int WIDTH = 200;
-    private int HEIGHT = 100;
+    private int HEIGHT = 100;       //Set path, width and height of the shark
     private Asset assetUp = new Asset("/images/shark.png", WIDTH, HEIGHT);
     private Asset assetDown = new Asset("/images/shark.png", WIDTH, HEIGHT);
     private ArrayList<Sprite> spritesUp = new ArrayList<>();
