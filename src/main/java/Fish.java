@@ -1,14 +1,14 @@
-import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.canvas.GraphicsContext;     //Import library
 
 class Fish implements GameObject {
     private int WIDTH = 56;
     private int HEIGHT = 40;
-    private Asset assets[] = {
+    private Asset assets[] = {      //Set the path, width and height of the fish
         new Asset("/images/fish0.png", WIDTH, HEIGHT),
         new Asset("/images/fish1.png", WIDTH, HEIGHT),
         new Asset("/images/fish2.png", WIDTH, HEIGHT)
     };
-    private Sprite sprite;
+    private Sprite sprite;                  //Delcare the variables
     private int currentAssetIndex = 0;
     private long prevTime = 0;
     private float terminalVel = 8;
@@ -30,7 +30,7 @@ class Fish implements GameObject {
         sprite.setVelY(-8);
     }
 
-    public void update(long now) {
+    public void update(long now) {      //Update the fish status
         if (!FishEscape.gameStarted && !FishEscape.gameEnded){
             updateFishHovering();
         } else if (FishEscape.gameEnded) {
@@ -57,7 +57,7 @@ class Fish implements GameObject {
         sprite.update();
     }
 
-    public void updateFishHovering() {
+    public void updateFishHovering() {      //Update the fish hovering
         double vel = sprite.getVelY();
 
 
@@ -107,7 +107,7 @@ class Fish implements GameObject {
         }
     }
 
-    public void updateFishPlay() {
+    public void updateFishPlay() {      //Update the fish motion when playing
         double vel = sprite.getVelY();
 
         if (vel >= terminalVel)
@@ -116,7 +116,7 @@ class Fish implements GameObject {
             sprite.setVelY(vel + 0.44);
     }
 
-    public void updateFishFalldown() {
+    public void updateFishFalldown() {      //Update the fish motion of falling down
         if (sprite.getPosY() + HEIGHT >= screenHeight - 112) {
             sprite.setVel(0, 0);
             sprite.setPosY(screenHeight - 112 - HEIGHT);
