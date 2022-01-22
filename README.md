@@ -1,1 +1,1 @@
-This is a CAT201 project and the game named Fish Escape.
+This is a CAT201 project and the name of game is Fish Escape.

@@ -1,4 +1,4 @@
-import javafx.application.Application;
+import javafx.application.Application; //Import library
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
@@ -15,13 +15,13 @@ import java.nio.file.Paths;
 import java.util.Map;
 import java.util.LinkedHashMap;
 
-public class FishEscape extends Application {
+public class FishEscape extends Application {   //Main program
  
     private Scene scene;
     private GraphicsContext ctx;
-
+                                        //Make the font style and get from resource font folder
     public static Font appFont = Font.loadFont(FishEscape.class.getResource("./fonts/04b_19.ttf").toExternalForm(), 42);
-    public static Color appColor = Color.web("#543847");
+    public static Color appColor = Color.web("#543847");    //Make the color
     private double width = 450;
     private double height = 600;
     private double minWidth = 365;
@@ -40,20 +40,20 @@ public class FishEscape extends Application {
     public static int score = 0;
     public static int highscore = 0;
 
-    public void start(Stage stage) {
-        stage.setTitle("Fish Escape");
-        stage.getIcons().add(new Image("/images/icon.jpeg"));
-        stage.setMinWidth(minWidth);
+    public void start(Stage stage) {        //Start the stage which is the window
+        stage.setTitle("Fish Escape");      //Set the title of the window
+        stage.getIcons().add(new Image("/images/icon.jpeg"));   //Set the icon
+        stage.setMinWidth(minWidth);        //Set the width and height of the window
         stage.setMinHeight(minHeight);
 
         setScene(stage);
         initRender();
         startGameLoop();
 
-        stage.show();
+        stage.show();   //Show the content of the window
     }
 
-    private void setScene(Stage stage) {
+    private void setScene(Stage stage) {        //Set the content of the window
         Pane pane = new Pane();
         Canvas canvas = new Canvas();
         ctx = canvas.getGraphicsContext2D();
@@ -79,18 +79,19 @@ public class FishEscape extends Application {
 
     private void setInputHandlers(Scene scene) {
         scene.setOnKeyPressed(e -> {
-            if (e.getCode() == KeyCode.SPACE)
-                inputHandler(-1, -1);
+            if (e.getCode() == KeyCode.SPACE) {     //When press the space bar, the fish will swim
+                inputHandler(-1, -1);    //and play the sound effect
                 music1();
+            }
         });
 
-        scene.setOnMousePressed(e -> {
-            inputHandler(e.getX(), e.getY());
-              //music1();
+        scene.setOnMousePressed(e -> {          //When click the mouse, the fish will swim
+            inputHandler(e.getX(), e.getY());   //and play the sound effect
+            music1();
         });
     }
 
-    private void inputHandler(double posX, double posY) {
+    private void inputHandler(double posX, double posY) {   //Process the input handler
         if (!gameEnded) {
             fish.jumpHandler();
             gameStarted = true;
@@ -107,7 +108,7 @@ public class FishEscape extends Application {
         initRender();
     }
 
-    private void initRender() {
+    private void initRender() {     //Put the elements and objects of the game inside the scene
         ctx.clearRect(0, 0, width, height);
         gameObjects.clear();
 
@@ -146,14 +147,14 @@ public class FishEscape extends Application {
         timer.start();
     }
 
-    public void music1() {
+    public void music1() {      //Declare the first sound effect
         String s1 = "src/main/resources/audio/bubble.mp3";
         Media music1 = new Media(Paths.get(s1).toUri().toString());
         MediaPlayer m = new MediaPlayer(music1);
         m.play();
     }
 
-    public static void music2() {
+    public static void music2() {   //Declare the second sound effect
         String s2 = "src/main/resources/audio/score.mp3";
        Media music2 = new Media(Paths.get(s2).toUri().toString());
         MediaPlayer m = new MediaPlayer(music2);
@@ -161,7 +162,7 @@ public class FishEscape extends Application {
         m.play();
     }
 
-    public static void music3() {
+    public static void music3() {   //Declare the third sound effect
         String s3 = "src/main/resources/audio/lose.mp3";
         Media music3 = new Media(Paths.get(s3).toUri().toString());
         MediaPlayer m = new MediaPlayer(music3);
