@@ -1,9 +1,9 @@
 import java.util.ArrayList;
-import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.canvas.GraphicsContext;     //Import library
 
 class Background implements GameObject {
     private int WIDTH = 288;
-    private int HEIGHT = 598;
+    private int HEIGHT = 598;           //Set the path, width and height of the background
     private Asset asset = new Asset("/images/background.png", WIDTH, HEIGHT);
     private ArrayList<Sprite> sprites = new ArrayList<>();
 
