@@ -14,7 +14,7 @@ class Title implements GameObject {
         sprite.setCtx(ctx);
     }
 
-    public void update(long now) {
+    public void update(long now) { //update 
     }
 
     public void render() {
