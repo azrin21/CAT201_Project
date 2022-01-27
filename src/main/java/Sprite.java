@@ -13,7 +13,7 @@ class Sprite {
         width,
         height;
 
-    public Sprite(Asset asset) {
+    public Sprite(Asset asset) { //reference resource file from asset
         width = asset.getWidth();
         height = asset.getHeight();
         path = asset.getPath();
