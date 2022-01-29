@@ -1,4 +1,4 @@
-import javafx.geometry.Rectangle2D;
+import javafx.geometry.Rectangle2D; // to describes the bound of object and set its position
 import javafx.scene.canvas.GraphicsContext;     //Import libraries
 
 class Restart implements GameObject {

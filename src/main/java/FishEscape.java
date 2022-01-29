@@ -3,12 +3,12 @@ import javafx.scene.media.Media; //integrating audio and video into Java FX Appl
 import javafx.scene.media.MediaPlayer;//controls for playing media
 import javafx.stage.Stage; // represents a window in a JavaFX desktop application
 import javafx.scene.Scene; //represents the physical contents of a JavaFX application.
-import javafx.scene.layout.Pane; //ayout container which can contain other JavaFX components internally, and lay them out.
+import javafx.scene.layout.Pane; //layout container which can contain other JavaFX components internally, and lay them out.
 import javafx.scene.canvas.Canvas;//image that can be drawn on using a set of graphics commands provided by a GraphicsContext
 import javafx.scene.canvas.GraphicsContext;//issue draw calls to a Canvas using a buffer
 import javafx.scene.paint.Color;//encapsulate colors
 import javafx.scene.text.Font;//to render text on screen
-import javafx.scene.input.KeyCode;//ssociated with the key in this key pressed or key released event.
+import javafx.scene.input.KeyCode;//sociated with the key in this key pressed or key released event.
 import javafx.scene.image.Image;//used to load an image into a JavaFX
 import javafx.animation.AnimationTimer;//used to have a rapid series of images that produces a movement illusion
 import java.nio.file.Paths;//used to show representation of location in particular file system

@@ -48,7 +48,7 @@ class Fish implements GameObject {
                 
                 FishEscape.gameStarted = false;
                 FishEscape.gameEnded = true;
-                FishEscape.music3();
+                FishEscape.music3(); // sound effect when the game over
             }
 
             updateFishPlay();

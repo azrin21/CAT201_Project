@@ -1,6 +1,6 @@
-import javafx.scene.canvas.GraphicsContext;
-import javafx.scene.paint.*;
-import javafx.scene.text.Font;      //Import libraries
+import javafx.scene.canvas.GraphicsContext; //Import libraries
+import javafx.scene.paint.*;  // color and gradient for background during scene rendering
+import javafx.scene.text.Font;
 
 class Score implements GameObject {
     private int WIDTH = 108;
