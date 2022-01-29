@@ -10,8 +10,8 @@ class Background implements GameObject {
     public Background(double screenWidth, double screenHeight, GraphicsContext ctx) {
         int backgroundWidth = 0;
         do {
-            Sprite background = new Sprite(asset);
-
+            Sprite background = new Sprite(asset); //sprite program to motion the background
+            //selection for changing the background based on screenHeight
             if ((screenHeight - 112) < HEIGHT)
                 background.resizeImage(WIDTH, HEIGHT);
             else
