@@ -1,19 +1,19 @@
 import javafx.application.Application; //Import library
-import javafx.scene.media.Media;
-import javafx.scene.media.MediaPlayer;
-import javafx.stage.Stage;
-import javafx.scene.Scene;
-import javafx.scene.layout.Pane;
-import javafx.scene.canvas.Canvas;
-import javafx.scene.canvas.GraphicsContext;
-import javafx.scene.paint.Color;
-import javafx.scene.text.Font;
-import javafx.scene.input.KeyCode;
-import javafx.scene.image.Image;
-import javafx.animation.AnimationTimer;
-import java.nio.file.Paths;
-import java.util.Map;
-import java.util.LinkedHashMap;
+import javafx.scene.media.Media; //integrating audio and video into Java FX Applications.
+import javafx.scene.media.MediaPlayer;//controls for playing media
+import javafx.stage.Stage; // represents a window in a JavaFX desktop application
+import javafx.scene.Scene; //represents the physical contents of a JavaFX application.
+import javafx.scene.layout.Pane; //ayout container which can contain other JavaFX components internally, and lay them out.
+import javafx.scene.canvas.Canvas;//image that can be drawn on using a set of graphics commands provided by a GraphicsContext
+import javafx.scene.canvas.GraphicsContext;//issue draw calls to a Canvas using a buffer
+import javafx.scene.paint.Color;//encapsulate colors
+import javafx.scene.text.Font;//to render text on screen
+import javafx.scene.input.KeyCode;//ssociated with the key in this key pressed or key released event.
+import javafx.scene.image.Image;//used to load an image into a JavaFX
+import javafx.animation.AnimationTimer;//used to have a rapid series of images that produces a movement illusion
+import java.nio.file.Paths;//used to show representation of location in particular file system
+import java.util.Map;//represents a mapping between a key and a value
+import java.util.LinkedHashMap;//used for iteration order
 
 public class FishEscape extends Application {   //Main program
  
