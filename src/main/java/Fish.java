@@ -1,14 +1,17 @@
-import javafx.scene.canvas.GraphicsContext;     //Import library
+import javafx.scene.canvas.GraphicsContext;     //Import library to issue draw calls to a Canvas using a buffer.
 
-class Fish implements GameObject {
+class Fish implements GameObject { //The Fish class will inherit from parent class GameObject 
+    //declare private variable
     private int WIDTH = 56;
     private int HEIGHT = 40;
     private Asset assets[] = {      //Set the path, width and height of the fish
+        //added image with width and height
         new Asset("/images/fish0.png", WIDTH, HEIGHT),
         new Asset("/images/fish1.png", WIDTH, HEIGHT),
         new Asset("/images/fish2.png", WIDTH, HEIGHT)
     };
-    private Sprite sprite;                  //Delcare the variables
+    private Sprite sprite; //Delcare the variables
+    //declare private variable and initialize
     private int currentAssetIndex = 0;
     private long prevTime = 0;
     private float terminalVel = 8;
@@ -18,7 +21,7 @@ class Fish implements GameObject {
 
     public Fish(double screenWidth, double screenHeight, GraphicsContext ctx) {
         this.screenHeight = screenHeight;
-
+        //Use sprite sheets to optimise the game performance
         sprite = new Sprite(assets[currentAssetIndex]);
         sprite.setPosX(screenWidth / 2 - WIDTH / 2);
         sprite.setPosY( FishEscape.gameEnded ? screenHeight - 112 - HEIGHT : (screenHeight - 112) / 2 );
