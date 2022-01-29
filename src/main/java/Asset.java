@@ -1,3 +1,4 @@
+// class to store typical files that we want to read in an application at a later time.
 class Asset {   //Create the class named Asset
     private String path;        //Declare the variables
     private double width, height;
