@@ -35,7 +35,7 @@ class Score implements GameObject {
     public void update(long now) {      //Update the score when the fish escape the shark
         if (FishEscape.activeSharks[0].getPosY() != prevActiveSharksPosY) {
             FishEscape.score++;
-            FishEscape.music2();
+            FishEscape.music2(); // sound effect when the score increasing
             prevActiveSharksPosY = FishEscape.activeSharks[0].getPosY();
 
             if (FishEscape.score > FishEscape.highscore)

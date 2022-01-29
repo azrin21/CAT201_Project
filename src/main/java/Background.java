@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+import java.util.ArrayList; // to add and remove the array size
 import javafx.scene.canvas.GraphicsContext;     //Import library
 
 class Background implements GameObject {
