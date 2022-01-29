@@ -1,8 +1,8 @@
 import javafx.scene.canvas.GraphicsContext;     //Import library
 
 class Fish implements GameObject {
-    private int WIDTH = 76;
-    private int HEIGHT = 60;
+    private int WIDTH = 66;
+    private int HEIGHT = 50;
     private Asset assets[] = {      //Set the path, width and height of the fish
         new Asset("/images/fish0.png", WIDTH, HEIGHT),
         new Asset("/images/fish1.png", WIDTH, HEIGHT),
