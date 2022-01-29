@@ -56,7 +56,7 @@ class Shark implements GameObject {
            spritesDown.remove(0);
         }
     }
-
+    //random shark position
     private Sprite[] createsharks(double posX) {
         double usableHeight = screenHeight - 364;
         int randomNum = ThreadLocalRandom.current().nextInt(0, (int) usableHeight + 1);

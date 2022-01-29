@@ -104,11 +104,12 @@ public class FishEscape extends Application {   //Main program
         }
     }
 
-    private void resizeHandler() {
+    private void resizeHandler(){
         initRender();
     }
 
-    private void initRender() {     //Put the elements and objects of the game inside the scene
+    //Put the elements and objects of the game inside the scene
+    private void initRender() {
         ctx.clearRect(0, 0, width, height);
         gameObjects.clear();
 

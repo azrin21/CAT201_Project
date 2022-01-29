@@ -22,7 +22,7 @@ class Restart implements GameObject {
     public void update(long now) {
     }
 
-    public void render() {
+    public void render() {  // game ended
         if (FishEscape.gameEnded)
             sprite.render();
     }

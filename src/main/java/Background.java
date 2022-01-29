@@ -30,7 +30,7 @@ class Background implements GameObject {
         } while (backgroundWidth < (screenWidth + WIDTH));
     }
 
-    public void update(long now) {
+    public void update(long now) { // make background permanent for whole game
     }
 
     public void render() {
