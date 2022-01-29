@@ -18,7 +18,7 @@ class GameOver implements GameObject {
     public void update(long now) {
     }
 
-    public void render() {
+    public void render() { //graphics buffer to the default device
         if (FishEscape.gameEnded)
             sprite.render();
     }
