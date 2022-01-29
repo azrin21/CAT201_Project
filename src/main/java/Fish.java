@@ -8,7 +8,7 @@ class Fish implements GameObject {
         new Asset("/images/fish1.png", WIDTH, HEIGHT),
         new Asset("/images/fish2.png", WIDTH, HEIGHT)
     };
-    private Sprite sprite;                  //Declared the variables
+    private Sprite sprite;                  //Delcare the variables
     private int currentAssetIndex = 0;
     private long prevTime = 0;
     private float terminalVel = 8;

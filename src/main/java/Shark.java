@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+import java.util.ArrayList;//store dynamically sized collection of elements
 import javafx.scene.canvas.GraphicsContext;
 import java.util.concurrent.ThreadLocalRandom;      //Import libraries
 
